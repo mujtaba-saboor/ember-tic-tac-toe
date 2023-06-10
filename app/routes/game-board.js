@@ -1,7 +1,7 @@
 import Route from '@ember/routing/route';
 import fetch from 'fetch';
 
-export default Route.extend({
+export default class GameBoardRoute extends Route {
   model() {
     return fetch('http://localhost:3000/api/v1/game_boards', {
       method: 'post',
@@ -22,5 +22,5 @@ export default Route.extend({
       .catch(function (err) {
         console.log('Fetch Error :-S', err);
       });
-  },
-});
+  }
+}

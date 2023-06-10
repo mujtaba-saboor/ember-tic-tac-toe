@@ -1,59 +1,59 @@
-@-webkit-keyframes blink {
+@keyframes blink {
   0% {
-      opacity: 1;
+    opacity: 1;
   }
+
   50% {
-      opacity: 0;
+    opacity: 0;
   }
+
   100% {
-      opacity: 1;
+    opacity: 1;
   }
-}
-@-moz-keyframes blink {
-  0% {
-      opacity: 1;
-  }
-  50% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-  }
-}
-@-o-keyframes blink {
-  0% {
-      opacity: 1;
-  }
-  50% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-  }
-}
-div.shaker {
-  -webkit-animation: blink 1s;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation: blink 1s;
-  -moz-animation-iteration-count: infinite;
-  -o-animation: blink 1s;
-  -o-animation-iteration-count: infinite;
 }
 
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+div.shaker {
+  animation: blink 1s;
+  animation-iteration-count: infinite;
+}
 
 * {
   box-sizing: border-box;
-  font-family: Arial;
+  font-family: Arial, sans-serif;
 }
 
 body {
   text-align: center;
   background-color: #000;
 }
-
-/* h1{
-    text-align: center;
-  } */
 
 .game {
   display: flex;
@@ -70,14 +70,14 @@ body {
   flex-wrap: wrap;
 }
 
-.stats div{
+.stats div {
   color: white;
   font-family: cursive;
 }
 
 .turn {
-  width: calc(100% / 2);
-  height: calc(100% / 2);
+  width: 60px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,11 +87,14 @@ body {
 .button-34 {
   background-color: #e0c2fb;
   border-radius: 100px;
-  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  box-shadow: rgb(44 187 99 / 20%) 0 -25px 18px -14px inset,
+    rgb(44 187 99 / 15%) 0 1px 2px, rgb(44 187 99 / 15%) 0 2px 4px,
+    rgb(44 187 99 / 15%) 0 4px 8px, rgb(44 187 99 / 15%) 0 8px 16px,
+    rgb(44 187 99 / 15%) 0 16px 32px;
   color: #730080;
   cursor: pointer;
   display: inline-block;
-  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
   padding: 7px 20px;
   text-align: center;
   text-decoration: none;
@@ -99,23 +102,28 @@ body {
   border: 0;
   font-size: 16px;
   user-select: none;
-  -webkit-user-select: none;
   touch-action: manipulation;
 }
 
 .button-34:hover {
-  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  box-shadow: rgb(44 187 99 / 35%) 0 -25px 18px -14px inset,
+    rgb(44 187 99 / 25%) 0 1px 2px, rgb(44 187 99 / 25%) 0 2px 4px,
+    rgb(44 187 99 / 25%) 0 4px 8px, rgb(44 187 99 / 25%) 0 8px 16px,
+    rgb(44 187 99 / 25%) 0 16px 32px;
   transform: scale(1.05) rotate(-1deg);
 }
 
 .button-33 {
   background-color: #c2fbd7;
   border-radius: 100px;
-  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  box-shadow: rgb(44 187 99 / 20%) 0 -25px 18px -14px inset,
+    rgb(44 187 99 / 15%) 0 1px 2px, rgb(44 187 99 / 15%) 0 2px 4px,
+    rgb(44 187 99 / 15%) 0 4px 8px, rgb(44 187 99 / 15%) 0 8px 16px,
+    rgb(44 187 99 / 15%) 0 16px 32px;
   color: green;
   cursor: pointer;
   display: inline-block;
-  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
   padding: 7px 20px;
   text-align: center;
   text-decoration: none;
@@ -123,35 +131,42 @@ body {
   border: 0;
   font-size: 16px;
   user-select: none;
-  -webkit-user-select: none;
   touch-action: manipulation;
 }
 
 .button-33:hover {
-  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  box-shadow: rgb(44 187 99 / 35%) 0 -25px 18px -14px inset,
+    rgb(44 187 99 / 25%) 0 1px 2px, rgb(44 187 99 / 25%) 0 2px 4px,
+    rgb(44 187 99 / 25%) 0 4px 8px, rgb(44 187 99 / 25%) 0 8px 16px,
+    rgb(44 187 99 / 25%) 0 16px 32px;
   transform: scale(1.05) rotate(-1deg);
 }
 
 .each-board {
+  font-size: 30px;
   width: calc(100% / 3);
   height: calc(100% / 3);
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid rgb(255, 238, 0);
+  border: 3px solid rgb(255 238 0);
 }
 
 .each-board:nth-child(-n + 3) {
   border-top: none;
-} 
+}
 
-.small-board div:nth-child(3n) {
+.small-board button {
+  background-color: inherit;
+}
+
+.small-board button:nth-child(3n) {
   border-right: none;
 }
 
-.each-board:nth-child(3n  - 2) {
+.each-board:nth-child(3n - 2) {
   border-left: none;
-} 
+}
 
 .ml-10 {
   margin-left: 10px;
@@ -160,18 +175,15 @@ body {
 .each-board:nth-child(n + 7) {
   border-bottom: none;
 }
-.X {
+
+.x {
   background-image: url("/assets/images/x1.png");
   background-size: cover;
 }
 
-.O {
+.o {
   background-image: url("/assets/images/letter_O_blue-512.png");
   background-size: cover;
-}
-
-.each-board {
-  font-size: 30px;
 }
 
 .hidden {

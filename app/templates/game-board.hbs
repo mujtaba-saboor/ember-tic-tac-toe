@@ -4,27 +4,26 @@
         <div class="game">
             <div class="small-board">
                 {{#each this.model.data.turns as |turns_tile|}}
-                    <div id="{{turns_tile.tile_position}}" class="each-board {{turns_tile.tile_type}}" {{action "handleClick" this.model}}><div class="turn"></div> </div>
+                    <button id="{{turns_tile.tile_position}}" class="each-board {{turns_tile.tile_type}}" type="button" {{on "click" this.handleClick}}><div class="turn"></div> </button>
                 {{/each}}
             </div>
         </div>
-        {{log this.help}}
         <div class="stats pt-2 row justify-content-lg-center">
-            <div class="player-o col-1">
+            <div class="player-o col-lg-1 col-sm-4">
                     <p>PLAYER O</p>
                     <p>{{if this.oCount this.oCount this.model.data.winner_count.O}}</p>
             </div>
-            <div class="col-1">
+            <div class="col-lg-1 col-sm-4">
                     <p>TIE</p>
                     <p>{{if this.tieCount this.tieCount this.model.data.winner_count.tie}}</p>
             </div>
-            <div class="player-x col-1">
+            <div class="player-x col-lg-1 col-sm-4">
                     <p>PLAYER X</p>
                     <p>{{if this.xCount this.xCount this.model.data.winner_count.X}}</p>
             </div>
         </div>
         <div class="pb-5">
-            <button class="reset button-33" type="button" {{action "handleReset"}}>Reset Board</button>
+            <button class="reset button-33" type="button" {{on "click" this.handleReset}}>Reset Board</button>
         </div>
     </div>
 {{/if}}
