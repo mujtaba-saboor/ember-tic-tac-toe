@@ -1,5 +1,6 @@
 import Controller from '@ember/controller';
 import { action } from '@ember/object';
+import CONSTANTS from '../constants';
 
 export default class GameBoardController extends Controller {
   turnData = [];
@@ -19,7 +20,7 @@ export default class GameBoardController extends Controller {
     ) {
       var currentTurn = prevTurnData ? prevTurnData.next_turn : 'o';
       fetch(
-        `http://localhost:3000/api/v1/game_boards/${this.model.data.current_game_board.id}/turns`,
+        `${CONSTANTS.API_URL}/api/v1/game_boards/${this.model.data.current_game_board.id}/turns`,
         {
           method: 'POST',
           headers: {
@@ -78,7 +79,7 @@ export default class GameBoardController extends Controller {
   @action
   async handleReset() {
     let response = await fetch(
-      `http://localhost:3000/api/v1/game_boards/${this.model.data.current_game_board.id}/reset`,
+      `${CONSTANTS.API_URL}/api/v1/game_boards/${this.model.data.current_game_board.id}/reset`,
       {
         method: 'DELETE',
         credentials: 'include',
