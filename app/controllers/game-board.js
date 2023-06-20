@@ -93,10 +93,10 @@ function handleWinner(data, boardTiles, oldSelf) {
   );
   moveSound.play();
   boardTiles.forEach((tile) => {
-    if (data.turn.winner_tiles.includes(Number(tile.id))) {
+    if (data.turn.winning_tiles.includes(Number(tile.id))) {
       tile.firstChild.classList.add('shaker');
     }
-    if (data.turn.winner_tiles.includes(Number(tile.id))) {
+    if (data.turn.winning_tiles.includes(Number(tile.id))) {
       setTimeout(function () {
         tile.firstChild.classList.remove('shaker');
       }, 3000);
